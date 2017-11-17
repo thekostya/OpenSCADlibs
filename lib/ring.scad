@@ -1,6 +1,6 @@
 use <utils.scad>;
 
-module ring(extD=2, intD=1, Height=1, rounded=0.3) {
+module ring(extD=2, intD=1, Height=1, rounded=0) {
     rotate_extrude(convexity=10)
         translate([intD,0])
             round_corners(rounded)
@@ -8,5 +8,5 @@ module ring(extD=2, intD=1, Height=1, rounded=0.3) {
 }
 
 module test_ring() {
-    ring();
+    ring(50,40,20,2);
 }
